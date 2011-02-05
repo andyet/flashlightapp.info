@@ -5,18 +5,10 @@
     	<meta name="apple-mobile-web-app-capable" content="yes">
     	<meta name="viewport" content="user-scalable=no, width=device-width">
     	<!--<link rel="apple-touch-icon" href="/images/dollar-icon.png">-->
-    	<script>
-    		document.addEventListener('click', function (e) {
-    		    if (document.body.className === 'on') {
-    		        document.body.className = 'off';
-    		    } else {
-    		        document.body.className = 'on';
-    		    }
-    		});
-    	</script>
     	<style>
     	    #from_andyet {
     	    	-webkit-box-shadow: #CCC 0px 0px 3px;
+    	    	-moz-box-shadow: #CCC 0px 0px 3px;
     	    	background: rgba(255, 255, 255, 1);
 	    		top: 0px;
 	    		left: 17px;
@@ -35,6 +27,11 @@
     	    	margin-top: 0;
     	    }
     	    
+    	    body {
+    	        -webkit-transition: all .25s ease-in-out;
+    	        -moz-transition: all .25s ease-in-out;
+    	    }
+    	    
     	    body.off {
     	        background-color: black;
     	    }
@@ -44,5 +41,25 @@
     	    }
     	</style>
     </head>
-    <body class="on"><a href="http://andyet.net" id="from_andyet"><h2>from &amp;yet</h2></a></body>
+    <body class="on">
+        <a href="http://andyet.net" id="from_andyet"><h2>from &amp;yet</h2></a>
+        <script>
+            document.addEventListener('click', function (e) {
+        	    if (document.body.className === 'on') {
+        	        document.body.className = 'off';
+        	    } else {
+        	        document.body.className = 'on';
+        	    }
+        	}, true);
+        </script>
+        <script type="text/javascript"> 
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script> 
+        <script type="text/javascript"> 
+        try {
+        var pageTracker = _gat._getTracker("#dedede");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+    </body>
 </html>
