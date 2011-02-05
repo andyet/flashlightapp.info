@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flashlight</title>
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+    	<!--<link rel="apple-touch-icon" href="/images/dollar-icon.png">-->
+    	<script>
+    		document.addEventListener('click', function (e) {
+    		    if (document.body.className === 'on') {
+    		        document.body.className = 'off';
+    		    } else {
+    		        document.body.className = 'on';
+    		    }
+    		});
+    	</script>
+    	<style>
+    	    #from_andyet {
+    	    	-webkit-box-shadow: #CCC 0px 0px 3px;
+    	    	background: rgba(255, 255, 255, 1);
+	    		top: 0px;
+	    		left: 17px;
+	    		padding: 3px 10px;
+	    		position: absolute;
+	    		height: 29px;
+    	    }
+    	    
+    	    #from_andyet h2 {
+    	    	background-image: url(from_&yet.png);
+    	    	background-repeat: no-repeat;
+    	    	height: 29px;
+    	    	line-height: 0;
+    	    	text-indent: -9999em;
+    	    	width: 79px;
+    	    	margin-top: 0;
+    	    }
+    	    
+    	    body.off {
+    	        background-color: black;
+    	    }
+    	    
+    	    body.off #from_andyet {
+    	        opacity: .6;
+    	    }
+    	</style>
+    </head>
+    <body class="on"><a href="http://andyet.net" id="from_andyet"><h2>from &amp;yet</h2></a></body>
+</html>
